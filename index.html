@@ -433,7 +433,7 @@ const AMPPOS={PLAY:'ПГ',SNIPER:'АЗ',SCORER:'ЛФ',DEF:'ТФ',BIG:'Ц'};
       <div class="b5av" style="--tier:${f.a.tier.col}">${f.p.photo?`<img src="${f.p.photo}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${f.a.icon}'}))">`:avImg(f.a)}</div>
       <div style="min-width:0;flex:1">
         <div class="b5nm">${f.p.name} <span style="color:var(--faint);font-family:Oswald">#${f.p.num}</span></div>
-        <div class="b5cm">${f.a.icon} как ${f.a.comp} · ${f.a.tier.emo} ${f.a.tier.lab}</div>
+        <div class="b5cm">${f.a.icon} как ${f.a.comp} · ${f.a.tier.emo} ${f.a.tier.lab} · ${f.p.gp} игр</div>
       </div>
       <div class="b5rt">${f.g.toFixed(1)}<span>рейтинг</span></div>
     </div>`).join('')+'</div>';
@@ -447,7 +447,7 @@ const AMPPOS={PLAY:'ПГ',SNIPER:'АЗ',SCORER:'ЛФ',DEF:'ТФ',BIG:'Ц'};
       <div class="prN ${i===0?'g':''}">${i+1}</div>
       ${r.p.photo?`<img class="prFace" src="${r.p.photo}" alt="" onerror="this.remove()">`:''}
       <div class="prNm">${r.p.name.split(' ')[0]} <span style="color:var(--faint)">#${r.p.num}</span>
-        <small>${r.a.icon} ${r.a.comp} · ${r.a.tier.emo} ${r.a.tier.lab}</small></div>
+        <small>${r.a.icon} ${r.a.comp} · ${r.a.tier.emo} ${r.a.tier.lab} · ${r.p.gp} игр</small></div>
       <div class="prBar"><i style="width:${Math.max(4,r.g/maxG*100)}%"></i></div>
       <div class="prV">${r.g.toFixed(1)}</div>
     </div>`).join('');
